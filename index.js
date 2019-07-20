@@ -1,5 +1,5 @@
 /**
- * @name 时间切片
+ * @name 任务切片
  * @description 一个用来做性能优化的工具
  * @author xichen Liu
  * @version 1.0.0
@@ -13,9 +13,9 @@ var isArray = arg => arg instanceof Array && arg.constructor === Array;
 
 var isFunction = arg => arg instanceof Function && arg.constructor === Function;
 
-function TimeSlice() {}
+function TaskSlice() {}
 
-TimeSlice.prototype = {
+TaskSlice.prototype = {
 	init: function ({ sliceList, callback }) {
 		if (!isFunction(callback)) {
 			console.error('callback 为必传参数并为 function');
@@ -65,4 +65,4 @@ TimeSlice.prototype = {
 	}
 }
 
-export default new TimeSlice();
+export default new TaskSlice();

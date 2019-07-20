@@ -1,4 +1,4 @@
-## 时间切片
+## 任务切片
 
 这是一个用来性能优化的工具，如果项目中存在 `long task` 的任务，可以采用此工具来做性能优化
 
@@ -13,15 +13,15 @@
 ### 安装
 
 ```javascript
-npm install time-slice
+npm install task-slice
 ```
 
 ### 使用方式
 
 ```javascript
-import TimeSlice from 'TimeSlice'
+import TaskSlice from 'TaskSlice'
 
-TimeSlice.init(number || array, function(i){
+TaskSlice.init(number || array, function(i){
     //i 执行到第几次，或者第几个切片任务
 })
 ```
@@ -30,5 +30,5 @@ TimeSlice.init(number || array, function(i){
 
 左侧的是优化前，右侧的是优化后
 
-![](https://github.com/nextdoorUncleLiu/time-slice/blob/master/img/dataOne.png)
-![](https://github.com/nextdoorUncleLiu/time-slice/blob/master/img/dataTwo.png)
+![](https://github.com/nextdoorUncleLiu/task-slice/blob/master/img/dataOne.png)
+![](https://github.com/nextdoorUncleLiu/task-slice/blob/master/img/dataTwo.png)
