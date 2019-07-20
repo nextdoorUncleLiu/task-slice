@@ -28,5 +28,7 @@ TimeSlice.init(number || array, function(i){
 
 ### 亲测数据对比
 
-![](img/dataOne.png)
-![](img/dataTwo.png)
+左侧的是优化前，右侧的是优化后
+
+![](https://github.com/nextdoorUncleLiu/time-slice/blob/master/img/dataOne.png)
+![](https://github.com/nextdoorUncleLiu/time-slice/blob/master/img/dataTwo.png)
