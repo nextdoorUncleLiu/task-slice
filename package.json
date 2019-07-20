@@ -1,0 +1,11 @@
+{
+  "name": "time-slice",
+  "version": "1.0.0",
+  "description": "一个用来做性能优化的工具",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "xichen Liu",
+  "license": "ISC"
+}
