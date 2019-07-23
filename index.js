@@ -7,8 +7,6 @@
 
 var raf = window.requestAnimationFrame ? window.requestAnimationFrame.bind(window) : setTimeout;
 
-var isNum = arg => arg instanceof Number && arg.constructor === Number;
-
 var isArray = arg => arg instanceof Array && arg.constructor === Array;
 
 var isFunction = arg => arg instanceof Function && arg.constructor === Function;
@@ -47,13 +45,12 @@ TaskSlice.prototype = {
 	},
 	/**
 	 * sliceQueue [切片]
-	 * @param { array | number } sliceList [切片数组或次数]
+	 * @param { number } sliceList [切片次数]
 	 * @param { function } callback [切片回调]
 	 */
 	sliceQueue: function* ({ sliceList, callback }) {
-		// 处理数组或次数
-		let listOrNum = (isNum(sliceList) && sliceList) || (isArray(sliceList) && sliceList.length);
-		for (let i = 0; i < listOrNum; ++i) {
+		// 处理次数
+		for (let i = 0; i < sliceList; ++i) {
 			const start = performance.now();
 			callback(i);
 			// 如果执行需要的时间少于 16.7ms，就停止继续执行下去

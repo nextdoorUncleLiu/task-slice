@@ -21,7 +21,7 @@ npm install task-slice
 ```javascript
 import TaskSlice from 'TaskSlice'
 
-TaskSlice.init(number || array, function(i){
+TaskSlice.init(number, function(i){
     //i 执行到第几次，或者第几个切片任务
 })
 ```
@@ -32,3 +32,28 @@ TaskSlice.init(number || array, function(i){
 
 ![](https://github.com/nextdoorUncleLiu/task-slice/blob/master/img/dataOne.png)
 ![](https://github.com/nextdoorUncleLiu/task-slice/blob/master/img/dataTwo.png)
+
+### 版本更新记录
+
+<table>
+    <tr>
+        <th>版本</th>
+        <th>时间</th>
+        <th>详情</th>
+    </tr>
+    <tr>
+        <td>v1.0.2</td>
+        <td>2019-7-23</td>
+        <td>去除对数组的支持，仅支持数字方式，原来通过 callback 获取的数组项可通过 callback 返回的索引去直接获取，减少代码不是刚需的兼容，提升工具库执行效率</td>
+    </tr>
+    <tr>
+        <td>v1.0.1</td>
+        <td>2019-7-20</td>
+        <td>格式化README</td>
+    </tr>
+    <tr>
+        <td>v1.0.0</td>
+        <td>2019-7-20</td>
+        <td>正式版上线</td>
+    </tr>
+</table>
