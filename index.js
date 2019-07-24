@@ -11,7 +11,7 @@ var isArray = arg => arg instanceof Array && arg.constructor === Array;
 
 var isFunction = arg => arg instanceof Function && arg.constructor === Function;
 
-function TaskSlice() {}
+function TaskSlice () { }
 
 TaskSlice.prototype = {
 	init: function ({ sliceList, callback }) {
@@ -39,7 +39,7 @@ TaskSlice.prototype = {
 		do {
 			res = generator.next();
 		}
-		while (!res.done && performance.now() - start < 16.7);
+		while ((!res.done && performance.now() - start < 16.7) || res.value);
 		if (res.done) return;
 		raf(this.next.bind(this));
 	},
@@ -55,9 +55,7 @@ TaskSlice.prototype = {
 			callback(i);
 			// 如果执行需要的时间少于 16.7ms，就停止继续执行下去
 			// 如果大于的话，就在下一次绘制的时候去执行
-			while (performance.now() - start < 16.7) {
-				yield;
-			}
+			yield performance.now() - start < 16.7;
 		}
 	}
 }
