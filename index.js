@@ -39,7 +39,7 @@ TaskSlice.prototype = {
 		do {
 			res = generator.next();
 		}
-		while ((!res.done && performance.now() - start < 16.7) || res.value);
+		while (!res.done && performance.now() - start < 16.7);
 		if (res.done) return;
 		raf(this.next.bind(this));
 	},
@@ -51,11 +51,8 @@ TaskSlice.prototype = {
 	sliceQueue: function* ({ sliceList, callback }) {
 		// 处理次数
 		for (let i = 0; i < sliceList; ++i) {
-			const start = performance.now();
 			callback(i);
-			// 如果执行需要的时间少于 16.7ms，就停止继续执行下去
-			// 如果大于的话，就在下一次绘制的时候去执行
-			yield performance.now() - start < 16.7;
+			yield
 		}
 	}
 }
