@@ -1,11 +1,14 @@
 {
   "name": "task-slice",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "一个用来做性能优化的工具",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "xichen Liu",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@vue/cli": "^3.0.0-beta.6"
+  }
 }

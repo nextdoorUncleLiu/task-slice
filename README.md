@@ -42,6 +42,11 @@ TaskSlice.init(number, function(i){
         <th>详情</th>
     </tr>
     <tr>
+        <td>v1.0.3</td>
+        <td>2019-8-4</td>
+        <td>添加demo</td>
+    </tr>
+    <tr>
         <td>v1.0.2</td>
         <td>2019-7-23</td>
         <td>去除对数组的支持，仅支持数字方式，原来通过 callback 获取的数组项可通过 callback 返回的索引去直接获取，减少代码不是刚需的兼容，提升工具库执行效率</td>
